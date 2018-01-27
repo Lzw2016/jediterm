@@ -16,9 +16,10 @@
             <groupId>com.jediterm</groupId>
             <artifactId>terminal</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>net.java.dev.jna</groupId>-->
-            <!--<artifactId>jna-platform</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.pty4j</groupId>
+            <artifactId>pty4j</artifactId>
+            <version>0.7.2</version>
+        </dependency>
     </dependencies>
 </project>

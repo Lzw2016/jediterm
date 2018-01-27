@@ -20,6 +20,10 @@
             <id>sparetimelabs</id>
             <url>http://www.sparetimelabs.com/maven2/</url>
         </repository>
+        <repository>
+            <id>my-maven-releases</id>
+            <url>http://39.108.68.132:8081/repository/maven-releases/</url>
+        </repository>
     </repositories>
 
     <modules>
@@ -72,7 +76,7 @@
             <dependency>
                 <groupId>net.java.dev.jna</groupId>
                 <artifactId>jna-platform</artifactId>
-                <version>4.5.1</version>
+                <version>4.1.0</version>
             </dependency>
             <dependency>
                 <groupId>com.sparetimelabs</groupId>
