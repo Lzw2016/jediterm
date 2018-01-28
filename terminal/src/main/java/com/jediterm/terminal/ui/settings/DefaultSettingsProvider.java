@@ -5,6 +5,7 @@ import com.jediterm.terminal.TextStyle;
 import com.jediterm.terminal.emulator.ColorPalette;
 import com.jediterm.terminal.model.LinesBuffer;
 import com.jediterm.terminal.ui.UIUtil;
+import org.apache.log4j.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +13,8 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
 public class DefaultSettingsProvider implements SettingsProvider {
+    private static final Logger LOG = Logger.getLogger(DefaultSettingsProvider.class);
+
     @Override
     public KeyStroke[] getNewSessionKeyStrokes() {
         return new KeyStroke[]{UIUtil.isMac
@@ -65,7 +68,13 @@ public class DefaultSettingsProvider implements SettingsProvider {
     public Font getTerminalFont() {
         String fontName;
         if (UIUtil.isWindows) {
-            fontName = "YaHei Consolas Hybrid";
+            try {
+                Font customFont = Font.createFont(Font.TRUETYPE_FONT, this.getClass().getResourceAsStream("/YaHei.Consolas.1.11b.ttf"));
+                return customFont.deriveFont(getTerminalFontSize());
+            } catch (Throwable e) {
+                LOG.warn("加载字体文件失败 YaHei.Consolas.1.11b.ttf", e);
+                fontName = "Consolas";
+            }
         } else if (UIUtil.isMac) {
             fontName = "Menlo";
         } else {
