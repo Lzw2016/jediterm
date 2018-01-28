@@ -8,39 +8,39 @@ import java.awt.*;
  */
 public interface AbstractTabs<T extends Component> {
 
-  int getTabCount();
+    int getTabCount();
 
-  void addTab(String name, T terminal);
+    void addTab(String name, T terminal);
 
-  String getTitleAt(int index);
+    String getTitleAt(int index);
 
-  int getSelectedIndex();
+    int getSelectedIndex();
 
-  void setSelectedIndex(int index);
+    void setSelectedIndex(int index);
 
-  void setTabComponentAt(int index, Component component);
+    void setTabComponentAt(int index, Component component);
 
-  int indexOfComponent(Component component);
+    int indexOfComponent(Component component);
 
-  int indexOfTabComponent(Component component);
+    int indexOfTabComponent(Component component);
 
-  void removeAll();
+    void removeAll();
 
-  void remove(T terminal);
+    void remove(T terminal);
 
-  void setTitleAt(int index, String name);
+    void setTitleAt(int index, String name);
 
-  void setSelectedComponent(T terminal);
+    void setSelectedComponent(T terminal);
 
-  JComponent getComponent();
+    JComponent getComponent();
 
-  T getComponentAt(int index);
+    T getComponentAt(int index);
 
-  void addChangeListener(TabChangeListener listener);
+    void addChangeListener(TabChangeListener listener);
 
-  interface TabChangeListener {
-    void tabRemoved();
+    interface TabChangeListener {
+        void tabRemoved();
 
-    void selectionChanged();
-  }
+        void selectionChanged();
+    }
 }

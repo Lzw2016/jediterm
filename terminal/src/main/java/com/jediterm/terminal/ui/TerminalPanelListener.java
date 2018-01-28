@@ -6,9 +6,9 @@ import java.awt.*;
 
 
 public interface TerminalPanelListener {
-  void onPanelResize(Dimension pixelDimension, RequestOrigin origin);
+    void onPanelResize(Dimension pixelDimension, RequestOrigin origin);
 
-  void onSessionChanged(TerminalSession currentSession);
+    void onSessionChanged(TerminalSession currentSession);
 
-  void onTitleChanged(String title);
+    void onTitleChanged(String title);
 }

@@ -6,5 +6,5 @@ import java.util.List;
  * @author traff
  */
 public interface LoggingTtyConnector {
-  List<char[]> getChunks();
+    List<char[]> getChunks();
 }

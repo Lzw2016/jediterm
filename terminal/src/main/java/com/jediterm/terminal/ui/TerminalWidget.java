@@ -10,17 +10,17 @@ import java.awt.*;
  * @author traff
  */
 public interface TerminalWidget {
-  TerminalSession createTerminalSession(TtyConnector ttyConnector);
+    TerminalSession createTerminalSession(TtyConnector ttyConnector);
 
-  JComponent getComponent();
+    JComponent getComponent();
 
-  boolean canOpenSession();
+    boolean canOpenSession();
 
-  void setTerminalPanelListener(TerminalPanelListener terminalPanelListener);
+    void setTerminalPanelListener(TerminalPanelListener terminalPanelListener);
 
-  Dimension getPreferredSize();
+    Dimension getPreferredSize();
 
-  TerminalSession getCurrentSession();
+    TerminalSession getCurrentSession();
 
-  TerminalDisplay getTerminalDisplay();
+    TerminalDisplay getTerminalDisplay();
 }

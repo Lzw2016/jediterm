@@ -8,11 +8,11 @@ import javax.swing.*;
  * @author traff
  */
 public interface TabbedSettingsProvider extends SettingsProvider {
-  boolean shouldCloseTabOnLogout(TtyConnector ttyConnector);
+    boolean shouldCloseTabOnLogout(TtyConnector ttyConnector);
 
-  String tabName(TtyConnector ttyConnector, String sessionName);
+    String tabName(TtyConnector ttyConnector, String sessionName);
 
-  KeyStroke[] getNextTabKeyStrokes();
+    KeyStroke[] getNextTabKeyStrokes();
 
-  KeyStroke[] getPreviousTabKeyStrokes();
+    KeyStroke[] getPreviousTabKeyStrokes();
 }

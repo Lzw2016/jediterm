@@ -3,15 +3,15 @@ package com.jediterm.terminal.ui.settings;
 import javax.swing.*;
 
 public interface SystemSettingsProvider {
-  KeyStroke[] getCopyKeyStrokes();
+    KeyStroke[] getCopyKeyStrokes();
 
-  KeyStroke[] getPasteKeyStrokes();
+    KeyStroke[] getPasteKeyStrokes();
 
-  KeyStroke[] getClearBufferKeyStrokes();
+    KeyStroke[] getClearBufferKeyStrokes();
 
-  KeyStroke[] getNewSessionKeyStrokes();
+    KeyStroke[] getNewSessionKeyStrokes();
 
-  KeyStroke[] getCloseSessionKeyStrokes();
+    KeyStroke[] getCloseSessionKeyStrokes();
 
-  KeyStroke[] getFindKeyStrokes();
+    KeyStroke[] getFindKeyStrokes();
 }

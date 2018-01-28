@@ -7,7 +7,7 @@
 
     <groupId>com.jediterm</groupId>
     <artifactId>jediterm</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.5</version>
     <name>jediterm</name>
     <packaging>pom</packaging>
 
@@ -20,11 +20,18 @@
             <id>sparetimelabs</id>
             <url>http://www.sparetimelabs.com/maven2/</url>
         </repository>
+    </repositories>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>my-maven-snapshots</id>
+            <url>http://39.108.68.132:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
         <repository>
             <id>my-maven-releases</id>
             <url>http://39.108.68.132:8081/repository/maven-releases/</url>
         </repository>
-    </repositories>
+    </distributionManagement>
 
     <modules>
         <module>terminal</module>
