@@ -1392,8 +1392,10 @@ public class TerminalPanel extends JComponent implements TerminalDisplay, Clipbo
     }
 
     private static String uncommitedChars(AttributedCharacterIterator text) {
+        if (text == null) {
+            return null;
+        }
         StringBuilder sb = new StringBuilder();
-
         for (char c = text.first(); c != CharacterIterator.DONE; c = text.next()) {
             if (c >= 0x20 && c != 0x7F) { // Hack just like in javax.swing.text.DefaultEditorKit.DefaultKeyTypedAction
                 sb.append(c);
